@@ -38,7 +38,7 @@ You'll need U-Center for this. Instructions to set that up (on Linux) are [here]
 You need to activate transmission of raw data over UART1 (serial over jumper cables) at the right baud rate for the script on the Pi to read and log it.
 - Connect the ArduSimple to U-Center
 - Open the Messages window. It may take a moment for the UBX options to appear.
-- Navigate down to UBX-CFG-PRT (Ports) and select UART1 as Target. Check that the Protocol out contains only UBX and the Baudrate is set according for your needs (to match the Python logging script we use, select 460800).
+- Navigate down to UBX-CFG-PRT (Ports) and select UART1 as Target. Check that the Protocol out contains only UBX (```0 - UBX```) and the Baudrate is set according for your needs (to match the Python logging script we use, select 460800).
 - Click on UBX-CFG-MSG (Messages)
   - Select the message 02-15 RXM-RAWX and activate it on UART1.
   - Select the message 02-13 RXM SFRBX and activate it on UART1.
