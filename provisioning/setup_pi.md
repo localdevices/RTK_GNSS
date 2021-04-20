@@ -33,7 +33,6 @@ I copy the contents of that example, navigate to the root of the ```boot``` part
 - Log into the Pi using the default password, which is ```raspberry```. Once you're in, immediately type ```passwd``` (_without_ ```sudo```) and—at the prompts—enter first the old and then the new password (twice). Try not to forget the new password.
 - Get everything up to date with ```sudo apt update && sudo apt upgrade -y```. This will take a few minutes, more if your Internet connection is slow.
 
-- Disable IPv6 ```sudo sed -i '$s/$/ ipv6.disable=1/' /boot/cmdline.txt```
-
 - Disable the default serial console to free up UART serial line ```sudo sed -i 's/console=serial0,115200 //g' /boot/cmdline.txt```
 
+That'll get you a Raspberry Pi ready to specifically configure and use for most of the applications related to this project.
