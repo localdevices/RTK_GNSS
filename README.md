@@ -6,7 +6,7 @@ We currently have two different documents with instructions to get started (thes
 
 * [A basic guide for student projects](Ardusimple_setup_for_student_projects.md)
 * [A detailed (work-in-progress) guideline for developers](Positioning_guideline.md)
-* [A quick setup guide for a very basic base station logger](provisioning/setup_base_logger.md), suitable for capturing a series of raw satellite observations on for Precise Point Positioning (PPP) processing.
+* [A quick setup guide for a very basic base station logger](provisioning/simple_python_logger/setup_base_logger.md), suitable for capturing a series of raw satellite observations on for Precise Point Positioning (PPP) processing.
 ![Surveyors enjoying higher precision than they are accustomed to](images/Surveyors.JPG)
 
 
