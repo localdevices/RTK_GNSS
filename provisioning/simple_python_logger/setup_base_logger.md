@@ -16,26 +16,14 @@ jumper cables are required to log the raw data from UART1. For this we need 5 Fe
 
 Only connect jumper cables if the device is unplugged from the power supply!
 
-Looking at the raspberry pi holding it in front of you with the SD card slot on the top, place all 5 cables on the right side of the header pins from the top. These are:
--	5V
--	5V
--	GROUND
--	TX
--	RX
+The following pins should be connected:
 
-Connect these to the GNSS receiver:
--	5V_IN
--	IOREF
--	GND
--	RX
--	TX
-
-So it should look like this:
--	5V - 5V_IN
--	5V - IOREF
--	GROUND - GND
--	TX - RX
--	RX - TX
+| pi | ArduSimple |
+| 5V | 5V_IN |
+| 5V | IOREF |
+| GROUND | GND |
+| TX | RX |
+| RX | TX |
 
 ![Jumper cable setup](/images/Ardusimple_RPi0_jumper_wiring_schematic.jpeg)
 
