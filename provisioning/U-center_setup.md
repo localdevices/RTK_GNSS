@@ -1,4 +1,4 @@
-Setting up ArduSimple devices
+# Setting up U-Center to configure ArduSimples
 
 ## U-center installation
 *Note: these are Linux-based instructions! If you're on Windows or Mac things will be different.*
@@ -13,15 +13,3 @@ After installation, plug your Ardusimple into your computer with a USB cable (it
 
 You may have to set the permission on the emulated Windows port to access the device via USB. For example, ```sudo chmod 777 ~/.wine/dosdevices/com33```.
 
-Once 
-
-## Configuring the base station for simple Python-based logging of raw UBX data
-You need to activate transmission of raw data over UART1 (serial over jumper cables) at the right baud rate for the script on the Pi to read and log it.
-- Connect the ArduSimple to U-Center
-- Click on UBX-CFG-MSG (Messages)
-  - Select the message 02-15 RXM-RAWX and activate it on UART1.
-  - Select the message 02-13 RXM SFRBX and activate it on UART1.
-  - Click on send.
-- Make sure under UBX-CFG-PRT (Ports) and select UART1 as Target. Check that the Protocol out contains at least UBX and the Baudrate is set according for your needs (to match the Python logging script we use, select 460800).
-- After that, go to UBX-CFG-CFG (Configuration)
-- Select all 4 devices on the right (BBR, FLASH, I2C-EEPROM, SPI-FLASH) and click on send.

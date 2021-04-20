@@ -45,8 +45,18 @@ Make really sure that these connections are correct! If these ones are connected
 
 ## Configure the ArduSimple
 
-- Make sure your ArduSimple is running the stock configuration. If you are not sure, you can use U-Center to configure it with the file in ```ublox_configurations/stock_ardusimple_base.txt```. [Here's how you do that]()
-- Set up the ArduSimple base to output raw UBX on serial at 460800 baud [note to self: Ivan, add more instructions()
+You'll need U-Center for this. Instructions to set that up (on Linux) are [here](/provisioning/U-center_setup.md)
+- Before you start this configuration journey, make sure your ArduSimple is running the stock configuration. If you are not sure, you can use U-Center to configure it with the file in ```/ublox_configurations/stock_ardusimple_base.txt```. [Here's how you do that]()
+
+You need to activate transmission of raw data over UART1 (serial over jumper cables) at the right baud rate for the script on the Pi to read and log it.
+- Connect the ArduSimple to U-Center
+- Click on UBX-CFG-MSG (Messages)
+  - Select the message 02-15 RXM-RAWX and activate it on UART1.
+  - Select the message 02-13 RXM SFRBX and activate it on UART1.
+  - Click on send.
+- Make sure under UBX-CFG-PRT (Ports) and select UART1 as Target. Check that the Protocol out contains at least UBX and the Baudrate is set according for your needs (to match the Python logging script we use, select 460800).
+- After that, go to UBX-CFG-CFG (Configuration)
+- Select all 4 devices on the right (BBR, FLASH, I2C-EEPROM, SPI-FLASH) and click on send.
 
 ## Set up the Pi as a serial logger
 
