@@ -1,6 +1,16 @@
 # Set up a base logger
 
-- Make sure your ArduSimple is running the stock configuration. If you are not sure, you can use U-Center to configure it with the file in ```ublox_configurations/stock_ardusimple_base.txt```
+Here are the instructions for setting up an Ardusimple GNSS base station with a Raspberry Pi to log raw satellite observations over serial (in UBX format, which we'll later convert to RINEX format for processing) for Precise Point Positioning.
+
+This is useful to get a very precise stand-alone position, either for direct use, or to provide a base station with a good absolute reference. The basic idea is to run an ArduSimple for at least 2.5 hours (4 is better) and log all of the raw satellite data, then send it to Natural Resources Canada (or another PPP provider) for processing.
+
+You will:
+- Set up jumper cables for serial transmission between the ArduSimple and a Raspberry Pi
+- Configure the ArduSimple to output raw satellite observations on its UART1 serial port at 460800 baud
+- Configure a Raspberry Pi to read those observations and log them to a file on its SD card for retrieval and processing later.
+
+
+- Make sure your ArduSimple is running the stock configuration. If you are not sure, you can use U-Center to configure it with the file in ```ublox_configurations/stock_ardusimple_base.txt```. [Here's how you do that](
 - Set up the ArduSimple base to output raw UBX on serial at 460800 baud [note to self: Ivan, add more instructions()
 - Set up the serial pinouts for your ArduSimple and Raspberry Pi [note to self: Ivan, add more instructions here]()
 - Flash a Pi SD card with the latest Raspberry Pi OS Lite from [here](https://www.raspberrypi.org/software/operating-systems/) (I use [Balena Etcher](https://www.balena.io/etcher/) for this). 
