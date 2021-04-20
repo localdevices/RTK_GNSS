@@ -19,6 +19,7 @@ Only connect jumper cables if the device is unplugged from the power supply!
 The following pins should be connected:
 
 | pi | ArduSimple |
+| --- | --- |
 | 5V | 5V_IN |
 | 5V | IOREF |
 | GROUND | GND |
