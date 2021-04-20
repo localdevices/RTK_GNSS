@@ -59,3 +59,15 @@ If you are having trouble setting up the Pi, [here](/provisioning/setup_pi.md) i
 - Copy the logger script into the home folder ```cp RTK_GNSS/provisioning/simple_python_logger/log_ubx.py /home/pi```
 - Copy the service file so that Systemd will start logging on startup ```sudo cp RTK_GNSS/provisioning/simple_python_logger/gnss_base_logger.service /etc/systemd/system/```
 - Enable the service ```sudo systemctl enable gnss_base_logger.service```
+
+### Converting to RINEX
+
+This section gives a quick description on how to convert the logged .ubx files of base and rover to RINEX files. It does not cover how to convert it to daily files.
+
+For the conversion we use the command line tool convbin from the RTKLIB toolkit. [This]() covers the installation procedure. Navigate to the convbin folder, set an alias or put a link for it into your bin folder. For one ubx file that you want to convert, use the following command line code:
+
+```
+convbin -os -od -f 5 -v 3.03 YOUR_UBX_FILE_PATH
+```
+
+This will convert the logged data one-to-one into RINEX. No splicing, no trimming or splitting is performed. It will output you a .obs file. For further processing, the supplied python scripts can be used, or manually with [gfzrnx](http://semisys.gfz-potsdam.de/semisys/scripts/download/index.php).
