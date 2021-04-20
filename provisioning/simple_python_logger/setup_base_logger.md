@@ -1,6 +1,7 @@
 # Set up a base logger
 
 - Make sure your ArduSimple is running the stock configuration. If you are not sure, you can use U-Center to configure it with the file in ```ublox_configurations/stock_ardusimple_base.txt```
+- Set up the ArduSimple base to output raw UBX on serial at 460800 baud [note to self: Ivan, add more instructions()
 - Set up the serial pinouts for your ArduSimple and Raspberry Pi [note to self: Ivan, add more instructions here]()
 - Flash a Pi SD card with the latest Raspberry Pi OS Lite from [here](https://www.raspberrypi.org/software/operating-systems/) (I use [Balena Etcher](https://www.balena.io/etcher/) for this). 
 - Add empty ```ssh``` file and appropriate ```wpa_supplicant.conf``` [like this](https://www.raspberrypi.org/documentation/configuration/wireless/headless.md) with wifi info to boot partition on that SD card. Put it in the Pi and start it up.

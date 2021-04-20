@@ -4,7 +4,7 @@ Read serial raw GNSS data from a device to a file.
 
 Flag arguments:
 -of or --outfile: File to write. Default is ~/base_log<datetime>.ubx
--br or --baud_rate: expected baud rate of the device. Default 360800.
+-br or --baud_rate: expected baud rate of the device. Default 460800.
 -to or --timeout: time in seconds to wait before giving up on a port
 -p or --port: name of the port the device is on (don't search)
 """
