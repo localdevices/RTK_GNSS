@@ -5,4 +5,6 @@
 - SSH into the parent pi ```ssh pi@raspberrypi.local``` with password ```raspberry```.
 - Change the default password ```passwd```, update, upgrade ```sudo apt update && sudo apt upgrade -y``` and install Git ```sudo apt install git -y```.
 - Clone this repo ```git clone https://github.com/localdevices/RTK_GNSS```
-
+- Copy the logger script into the home folder ```cp RTK_GNSS/provisioning/simple_python_logger/log_ubx.py /home/pi```
+- Copy the service file so that Systemd will start logging on startup ```sudo cp RTK_GNSS/provisioning/simple_python_logger/gnss_base_logger.service /etc/systemd/system/```
+- Enable the service ```sudo systemctl enable gnss_base_logger.service```
